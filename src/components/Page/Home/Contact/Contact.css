@@ -1,0 +1,104 @@
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: var(--text-color);
+    margin: 100px auto;
+}
+
+.left-contact {
+    width: calc(100% / 2 - 30px);
+}
+.left-contact h2 {
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 50px;
+}
+.left-contact h2::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100px;
+    height: 3px;
+    background: var(--text-color);
+    margin-top: 10px;
+}
+.left-contact h2 span {
+    color: #f00;
+}
+.left-contact .text {
+    width: 80%;
+    font-size: 16px;
+    font-family: var(--font-2);
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+.left-contact .address:hover span {
+    color: rgb(255, 24, 24);
+}
+.left-contact .address span {
+    margin-left: 20px;
+    transition: 0.5s;
+}
+.left-contact .email:hover span {
+    color: rgb(255, 24, 24);
+}
+.left-contact .email span {
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+
+
+
+.right-contact {
+    width: calc(100% / 2 - 30px);
+}
+.right-contact input {
+    width: 100%;
+    background: #2c292c;
+    padding: 20px 40px 20px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+input::placeholder {
+    color: var(--text-color);
+    font-family: var(--font-2);
+    font-size: 14px;
+    font-weight: 200;
+}
+.right-contact input:nth-child(1) {
+    padding: 10px 40px 10px 20px;
+}
+.right-contact input:nth-child(2) {
+    padding: 10px 40px 10px 20px;
+}
+.right-contact input:nth-child(3) {
+    padding: 10px 40px 100px 20px;
+}
+
+.right-contact button {
+    background-color: rgb(216, 4, 4); 
+    color: white; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.right-contact button:hover {
+    filter: brightness(1.2); 
+    box-shadow: 0 4px 20px 8px rgba(255, 0, 0, 0.4);
+}
+.custom-input {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    border-radius: 5px; 
+}
+.custom-input:focus {
+    border-color: #e74c3c;
+    outline: none;
+}

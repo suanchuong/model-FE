@@ -1,0 +1,32 @@
+.attach {
+    color: var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200px 400px;
+    background-image: url('../../../../assets/img/attachment/1.jpg');
+    min-height: 400px;
+    height: 400px;
+    background-position: 50% -48px;
+    margin: 150px auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.attach .box-att {
+    width: calc(100% / 4 - 30px);
+    text-align: center;
+}
+
+.attach .box-att .quantity {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.attach .box-att .checking {
+    font-family: var(--font-2);
+    font-size: 18px;
+    font-weight: 700;
+}

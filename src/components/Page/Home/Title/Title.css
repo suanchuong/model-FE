@@ -1,0 +1,35 @@
+.title-page {
+    text-align: center;
+    margin: 100px auto;
+    color: var(--text-color);
+}
+.title-page h1 {
+    font-size: 48px;
+    font-family: var(--font-1);
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 60px;
+}
+.title-page h1::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 6%;
+    height: 2px;
+    background: var(--text-color);
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+}
+.title-page h1 span {
+    background: var(--gra-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-page p {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #ddd;
+}

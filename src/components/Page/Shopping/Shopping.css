@@ -1,0 +1,115 @@
+.shopping-page h1 {
+    background: var(--gra-color);
+    color: var(--text-color);
+    font-family: var(--font-2);
+    font-weight: 600;
+    font-size: 50px;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.shopping-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--text-color);
+    box-shadow: rgba(34, 34, 34, 0.25) 0px 54px 55px, rgba(233, 0, 0, 0.12) 0px -12px 30px, rgba(202, 3, 3, 0.12) 0px 4px 6px, rgba(206, 2, 2, 0.17) 0px 12px 13px, rgba(151, 14, 14, 0.09) 0px -3px 5px;
+}
+.shopping-item .thumb-checkout {
+    width: 20%;
+}
+.shopping-item .thumb-checkout img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.shopping-item h5 {
+    font-family: var(--font-2);
+    font-size: 20px;
+    font-weight: 500;
+    color: #ddd;
+}
+.shopping-item .price-shop {
+    font-weight: 700;
+    font-size: 30px;
+    color: #f00;
+}
+.shopping-item .quantity-control .btn-checkout button {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: var(--gra-color);
+    color: var(--text-color);
+    transition: 0.5s all;
+}
+.shopping-item .quantity-control .btn-checkout button:hover {
+    filter: brightness(1.2); 
+    box-shadow: 0 4px 20px 8px rgba(255, 0, 0, 0.4);
+}
+.shopping-item .quantity-control .btn-checkout span {
+    margin: 0 20px;
+}
+.shopping-item .quantity-control .delete-btn {
+    border-radius: 20px;
+    border: 1px solid #f00;
+    background: none;
+    color: var(--text-color);
+    padding: 8px 30px;
+    font-size: 14px;
+    transition: 0.5s all;
+    margin-top: 20px;
+}
+.shopping-item .quantity-control .delete-btn:hover {
+    filter: brightness(1.2); 
+    box-shadow: 0 4px 20px 8px rgba(255, 0, 0, 0.4);
+}
+
+.shopping-page .total {
+    color: var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.shopping-page .total h5 {
+    font-family: var(--font-2);
+    font-size: 20px;
+    font-weight: 600;
+}
+.shopping-page .total p {
+    color: #f00;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.shopping-page .checkout-link {
+    border-radius: 20px;
+    background: var(--gra-color);
+    color: var(--text-color);
+    padding: 8px 30px;
+    font-size: 18px;
+    transition: 0.5s all;
+    margin-top: 30px;
+}
+.shopping-page .checkout-link:hover {
+    filter: brightness(1.2); 
+    box-shadow: 0 4px 20px 8px rgba(255, 0, 0, 0.4);
+}
+
+.empty-cart-message {
+    text-align: center;
+    font-family: var(--font-2);
+    font-weight: 100;
+    font-size: 40px;
+    color: var(--text-color);
+    margin-top: 50px;
+}

@@ -1,0 +1,183 @@
+.best-seller {
+    margin: 150px auto;
+}
+.container {
+    position: relative;
+}
+.title-seller {
+    color: var(--text-color);
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-seller h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.title-seller p {
+    font-size: 14px;
+    font-weight: 600;
+}
+.title-seller i {
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid var(--second-color);
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+.title-seller p:hover {
+    color: #f00;
+}
+.title-seller p:hover i {
+    transform: rotate(90deg);
+    border: 1px solid #f00;
+    filter: brightness(1.2); 
+    box-shadow: 0 4px 20px 8px rgba(255, 0, 0, 0.4);
+}
+.navigation-buttons .fa-angle-left {
+    color: var(--second-color);
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translate(-50%);
+    font-size: 24px;
+    transition: 0.5s;
+}
+.navigation-buttons .fa-angle-left:hover {
+    color: #f00;
+}
+.navigation-buttons .fa-angle-right {
+    color: var(--second-color);
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translate(-50%);
+    font-size: 24px;
+    transition: 0.5s;
+}
+.navigation-buttons .fa-angle-right:hover {
+    color: #f00;
+}
+
+.swiper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    color: var(--text-color);
+}
+.swiper .box-item {
+    cursor: pointer;
+    /* overflow: hidden; */
+    border-radius: 10px;
+}
+.swiper .box-item:hover img {
+    transform: scale(1.1);
+}
+.swiper .box-item .thumb {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.swiper .box-item .thumb img {
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.swiper .box-item .thumb .overplay button {
+    position: absolute;
+    display: block;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: var(--second-color);
+    color: var(--text-color);
+    padding: 6px 16px;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);  
+    transition: 0.5s all;  
+}
+.swiper .box-item .thumb .overplay button:hover {
+    background: #f00;
+    color: var(--text-color);
+}
+.swiper .box-item:hover .overplay button {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper .box-item .text .price {
+    color: #ff4901;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.swiper .box-item .text .name {
+    font-family: var(--font-2);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.swiper .box-item .text .review {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.swiper .box-item .text .review .rate {
+    margin-bottom: 0;
+    color: rgb(255, 238, 0);
+}
+.swiper .box-item .text .review .rate i {
+    font-size: 12px;
+}
+.swiper .box-item .text .review span {
+    font-size: 12px;
+}
+/* Custom swiper */
+:root {
+    --swiper-navigation-size: 24px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--text-color); 
+    padding: 15px; 
+    font-size: 18px; 
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.3s ease; 
+}
+.swiper-button-next {
+    right: 20px; 
+}
+.swiper-button-prev {
+    left: 20px;
+}
+
+/* Pagination */
+.swiper-pagination {
+    bottom: -10px; 
+    z-index: 2;
+}
+.swiper-pagination-bullet {
+    background: var(--second-color); 
+    opacity: 1; 
+}
+.swiper-pagination-bullet-active {
+    background: #f00;
+}
+

@@ -1,0 +1,41 @@
+.wallpaper-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 150px auto;
+}
+.pic {
+    width: calc(100% / 2 - 5px);
+}
+.pic-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.pic-top .thumb {
+    width: calc(100% / 2 - 5px);
+    height: auto;
+    overflow: hidden;
+}
+.pic-top .thumb img {
+    transition: 1s all;
+}
+.pic-top .thumb:hover img {
+    transform: scale(1.1);
+}
+
+
+.pic-bot {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.pic-bot img {
+    width: 100%;
+    height: 300px;
+    transition: 1s all;
+    object-fit: cover;
+}
+.pic-bot:hover img {
+    transform: scale(1.1);
+}

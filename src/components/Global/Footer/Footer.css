@@ -1,0 +1,182 @@
+.footer {
+    margin-top: 150px;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(224, 11, 11, 0.12) 0px -12px 30px,  rgba(224, 11, 11, 0.12) 0px 4px 6px,  rgba(224, 11, 11, 0.12) 0px 12px 13px,  rgba(224, 11, 11, 0.12) 0px -3px 5px;
+    position: relative
+}
+.footer .pop img {
+    width: 1000px;
+}
+.footer .pop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+}
+.footer ul {
+    padding-left: 0;
+}
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: var(--text-color);
+    border-bottom: 1px solid #f00;
+}
+.footer-top-left {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 10px;
+    z-index: 1;
+}
+.footer-top-left .logo-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.footer-top-left .logo-footer img {
+    width: 100px;
+}
+.footer-top-left .logo-footer p {
+    font-family: var(--font-2);
+    font-size: 16px;
+    font-weight: 700;
+}
+.footer-top-left .desc-footer {
+    width: 90%;
+    line-height: 30px;
+    font-family: var(--font-2);
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+.footer-top-left .hotline i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #f00;
+}
+.footer-top-left .hotline span {
+    font-family: var(--font-2);
+    font-size: 16px;
+    font-weight: 100;
+}
+.footer-top-left .phone {
+    font-weight: 700;
+    font-size: 24px;
+    color: rgb(250, 64, 17);
+}
+.footer-top-left .social-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+.footer-top-left .social-footer i{
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: rgb(250, 64, 17);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+}
+.footer-top-left .social-footer i:hover {
+    filter: brightness(1.2); 
+    box-shadow: 0 4px 20px 8px rgba(255, 0, 0, 0.4);
+}
+
+.footer-top-right {
+    width: calc(100% / 2 - 20px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    z-index: 1;
+}
+.footer-top-right .col {
+    width: calc(100% / 4 - 20px);
+}
+.footer-top-right .col .title-footer {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.footer-top-right .col .list-footer li {
+    font-family: var(--font-2);
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    color: #ddd;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.footer-top-right .col .list-footer li:hover {
+    color: rgb(255, 49, 13);
+}
+
+.footer-bot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--text-color);
+    margin-top: 30px;
+}
+.footer-bot .footer-bot-left h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.footer-bot .footer-bot-left .subs {
+    font-family: var(--font-2);
+    font-size: 14px;
+    font-weight: 100;
+    width: 80%;
+    margin-bottom: 20px;
+}
+.footer-bot .footer-bot-left input {
+    width: 70%;
+    background: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.custom-input {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    border-radius: 5px; 
+}
+.custom-input:focus {
+    border-color: #e74c3c;
+    outline: none;
+    color: var(--text-color);
+}
+
+.footer-bot .footer-bot-left button {
+    width: 70%;
+    margin-bottom: 20px;
+    background-color: rgb(216, 4, 4); 
+    color: white; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.footer-bot .footer-bot-left button:hover {
+    filter: brightness(1.2); 
+    box-shadow: 0 4px 20px 8px rgba(255, 0, 0, 0.4);
+}
+
+.footer-bot .footer-bot-right {
+    margin-top: 100px;
+    cursor: pointer;
+    z-index: 1;
+}
+.footer-bot .footer-bot-right p {
+    font-size: 16px;
+    font-weight: 200;
+    transition: 0.5s;
+}
+.footer-bot .footer-bot-right p:hover {
+    color: rgb(255, 115, 0); 
+}
