@@ -51,35 +51,23 @@ const Product = () => {
                 <Swiper
                     ref={swiperRef}
                     spaceBetween={30}
-                    slidesPerView={4} // Mặc định: 4 item
+                    slidesPerView={4}
                     pagination={{ clickable: true }}
                     navigation={false}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                     speed={1000}
                     modules={[Navigation, Pagination, Autoplay]}
                     breakpoints={{
+                        1400: {
+                            slidesPerView: 4,
+                        },
                         996: {
                             slidesPerView: 3,
                         },
                         768: {
                             slidesPerView: 2,
                         },
-                        470: {
-                            slidesPerView: 1,
-                        },
-                        415: {
-                            slidesPerView: 1,
-                        },
-                        400: {
-                            slidesPerView: 1,
-                        },
-                        360: {
-                            slidesPerView: 1,
-                        },
-                        340: {
-                            slidesPerView: 1,
-                        },
-                        310: {
+                        430: {
                             slidesPerView: 1,
                         },
                     }}

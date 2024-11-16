@@ -33,7 +33,6 @@
 .cart-sales {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     align-items: center;
     justify-content: space-between;
     color: var(--text-color);
@@ -72,7 +71,7 @@
     display: block;
     border: 2px dotted var(--second-color);
     border-radius: 10px;
-    width: 300px;
+    width: 250px;
     height: 300px;
     object-fit: cover;
 }
@@ -89,7 +88,6 @@
 
 .sales-item .title {
     width: calc(100% / 2 - 20px);
-    padding-left: 50px;
     padding-top: 5px;
 }
 .sales-item .title h3 {
@@ -136,6 +134,7 @@
     background: var(--gra-color);
     padding: 4px 8px;
     border-radius: 6px;
+    color: var(--text-color);
 }
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: -20px;

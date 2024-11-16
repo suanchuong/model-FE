@@ -7,6 +7,9 @@
 
 .checkout-page .checkout-pay {
     width: calc(100% / 2 - 20px);
+    box-shadow: rgba(175, 0, 0, 0.25) 0px 54px 55px, rgba(197, 0, 0, 0.12) 0px -12px 30px, rgba(180, 3, 3, 0.12) 0px 4px 6px, rgba(182, 7, 7, 0.17) 0px 12px 13px, rgba(161, 11, 11, 0.09) 0px -3px 5px;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .checkout-page .checkout-pay input {

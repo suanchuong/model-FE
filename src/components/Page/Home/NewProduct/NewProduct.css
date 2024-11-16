@@ -10,16 +10,19 @@
 }
 
 .new {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background: #0000007e;
     color: var(--text-color);
-    width: 100%;
-    height: 464px;  
-    text-align: center;
 }
 .new h1 {
     width: 30%;
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 100px;
+    padding-bottom: 20px;
     font-weight: 700;
     font-family: var(--font-2);
 }
@@ -32,9 +35,9 @@
     border-radius: 5px;
     font-size: 20px;
     transition: linear 0.5s;
+    margin-bottom: 100px;
 }
 .new button:hover {
     background: var(--gra-color);
     box-shadow: rgba(240, 53, 46, 0.4) 5px 5px, rgba(240, 53, 46, 0.4) 10px 10px, rgba(240, 53, 46, 0.4) 15px 15px, rgba(240, 53, 46, 0.4) 20px 20px, rgba(240, 53, 46, 0.4) 25px 25px;
 }
-

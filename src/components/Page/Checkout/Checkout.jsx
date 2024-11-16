@@ -55,7 +55,6 @@ const Checkout = () => {
         };
 
         try {
-            // Gửi yêu cầu tạo đơn hàng kèm thông tin người dùng lên API
             const response = await fetch('https://672dbfbdfd89797156438317.mockapi.io/order', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -63,7 +62,6 @@ const Checkout = () => {
             });
 
             if (response.ok) {
-                // Gửi email thông báo cho người dùng
                 emailjs
                     .sendForm("service_godyinh", "template_cz5zash", form.current, {
                         publicKey: "xKWrIutfGYO06jP0e",
@@ -76,8 +74,6 @@ const Checkout = () => {
                             console.log("Email failed...", error.text);
                         }
                     );
-
-                // Hiển thị modal thông báo đơn hàng thành công
                 setShowModal(true);
                 clearCart();
                 formik.resetForm();

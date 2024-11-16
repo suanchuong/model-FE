@@ -75,28 +75,16 @@ const Sale = () => {
                         modules={[Navigation, Pagination, Autoplay]}
                         className="mySwiper"
                         breakpoints={{
-                            996: {
+                            1200: {
                                 slidesPerView: 2,
+                            },
+                            996: {
+                                slidesPerView: 1,
                             },
                             768: {
-                                slidesPerView: 2,
-                            },
-                            470: {
                                 slidesPerView: 1,
                             },
-                            415: {
-                                slidesPerView: 1,
-                            },
-                            400: {
-                                slidesPerView: 1,
-                            },
-                            360: {
-                                slidesPerView: 1,
-                            },
-                            340: {
-                                slidesPerView: 1,
-                            },
-                            310: {
+                            430: {
                                 slidesPerView: 1,
                             },
                         }}

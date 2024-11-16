@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { Container, Button, Offcanvas } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // Dùng Link để chuyển hướng
+import { Link } from 'react-router-dom';
 import { UseCart } from '../../../context/CartContext';
 import { Link as ScrollLink } from 'react-scroll';
 import Logo from '../../../assets/img/logo/logo.png';
@@ -15,19 +15,20 @@ const Header = ({ name, ...props }) => {
     const [searchResults, setSearchResults] = useState([]);
     const { cart, handleQuantity } = UseCart();
 
+    //Hàm đóng tắt popup shopping và search
     const handleSearchClose = () => setShowSearch(false);
     const handleSearchShow = () => setShowSearch(true);
-
     const handleCartClose = () => setShowCart(false);
     const handleCartShow = () => setShowCart(true);
 
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
     const totalSpent = cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
 
+    //Hàm tìm keysearch
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
     };
-
+    
     useEffect(() => {
         const fetchSearchResults = async () => {
             if (searchQuery.length > 2) {
@@ -90,7 +91,7 @@ const Header = ({ name, ...props }) => {
                                             key={product.id}
                                             to={`/product/${product.id}`}
                                             className="search-result-item"
-                                            onClick={handleSearchClose} // Đóng bảng tìm kiếm khi nhấp vào kết quả
+                                            onClick={handleSearchClose} 
                                         >
                                             <h5>{product.title}</h5>
                                             <p>{product.description}</p>

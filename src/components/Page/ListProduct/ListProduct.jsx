@@ -5,7 +5,7 @@ import Cart from '../../Global/Cart/Cart';
 import Pagination from 'react-bootstrap/Pagination';
 import useFetch from '../../../hooks/useFetch';
 import { useLocation } from 'react-router-dom';
-import { Spinner } from 'react-bootstrap'; // Import spinner for loading effect
+import { Spinner } from 'react-bootstrap';
 
 const ListProduct = () => {
     const products = useFetch('https://672dbfbdfd89797156438317.mockapi.io/listProduc-');
@@ -14,26 +14,30 @@ const ListProduct = () => {
     const [selectedStatus, setSelectedStatus] = useState('');
     const [selectedRatio, setSelectedRatio] = useState('');
     const [priceRange, setPriceRange] = useState([10, 900]);
-    const [loading, setLoading] = useState(false); // New loading state
+    const [loading, setLoading] = useState(false);
     const itemsPerPage = 16;
     const location = useLocation();
 
+    //Lấy đúng category và status trên thanh header khi bấm vào Product và Shop
     useEffect(() => {
         const params = new URLSearchParams(location.search);
         setSelectedCategory(params.get("category") || '');
         setSelectedStatus(params.get("status") || '');
     }, [location.search]);
 
+    //Hàm lọc filter
     const filteredProducts = products.filter(item => {
         const categoryMatch = selectedCategory ? item.film.toLowerCase() === selectedCategory.toLowerCase() : true;
         const statusMatch = selectedStatus ? item.status.trim().toLowerCase() === selectedStatus.toLowerCase() : true;
         const ratioMatch = selectedRatio ? item.ratio === selectedRatio : true;
+        //Xét giá mặc định về true ngay cả khi không thay đổi thanh filter
         const priceMatch = (priceRange && priceRange.length === 2 && (priceRange[0] !== 10 || priceRange[1] !== 900))
             ? item.price >= priceRange[0] && item.price <= priceRange[1]
             : true;
         return categoryMatch && statusMatch && ratioMatch && priceMatch;
     });
 
+    //Hàm chia page
     const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
     const indexOfLastProduct = currentPage * itemsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
@@ -49,22 +53,23 @@ const ListProduct = () => {
         </Pagination.Item>
     ));
 
+    //Hàm reset lại filter
     const resetFilters = () => {
-        setLoading(true); // Start loading
+        setLoading(true); 
         setSelectedCategory('');
         setSelectedStatus('');
         setSelectedRatio('');
         setPriceRange([10, 900]);
         setCurrentPage(1);
-        setLoading(false); // Stop loading after reset
+        setLoading(false); 
     };
 
+    //Hàm loading khi chọn filter time out 0.5s
     const applyFilters = () => {
-        setLoading(true); // Start loading
-        // You could introduce some delay here if you want to simulate a longer load
+        setLoading(true); 
         setTimeout(() => {
-            setLoading(false); // Stop loading after filters are applied
-        }, 500); // 500ms delay, adjust as needed
+            setLoading(false);
+        }, 500);
     };
 
     return (
